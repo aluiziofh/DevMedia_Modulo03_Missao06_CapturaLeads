@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Leads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <h1 class="hero-title">Cadastre-se agora</h1>
+            <p class="hero-subtitle">Receba as melhores ofertas e novidades em primeira mão</p>
+        </div>
+        
+        <div class="form-container">
+            <form id="leadForm" class="lead-form">
+                <div class="form-group">
+                    <label for="nome" class="form-label">Nome completo</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        class="form-input" 
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+                    <span class="error-message" id="nome-error"></span>
+                </div>
+
+                <div class="phone-group">
+                    <div class="form-group phone-ddd">
+                        <label for="ddd" class="form-label">DDD</label>
+                        <input 
+                            type="tel" 
+                            id="ddd" 
+                            name="ddd" 
+                            class="form-input" 
+                            placeholder="11"
+                            maxlength="2"
+                            required
+                        >
+                        <span class="error-message" id="ddd-error"></span>
+                    </div>
+                    
+                    <div class="form-group phone-number">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            class="form-input" 
+                            placeholder="999999999"
+                            maxlength="9"
+                            required
+                        >
+                        <span class="error-message" id="telefone-error"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Cadastrar</span>
+                    <div class="btn-loader" id="btnLoader"></div>
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3>Cadastro realizado com sucesso!</h3>
+                <p>Obrigado pelo seu interesse. Em breve entraremos em contato.</p>
+                <button class="new-lead-btn" id="newLeadBtn">Novo Cadastro</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
